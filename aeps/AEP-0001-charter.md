@@ -165,5 +165,6 @@ explicit privacy review.
 ## Changelog
 
 - 2026-07-24 — Initial draft as `rfcs/0001-charter.md`
-- 2026-11-08 — Migrated to `aeps/AEP-0001-charter.md`; updated internal
-  links to the MkDocs site
+- 2026-07-24 — Restructured and migrated to `aeps/AEP-0001-charter.md`
+  as part of the MkDocs Material site upgrade; internal links updated
+  to the docs site

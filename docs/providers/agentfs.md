@@ -33,9 +33,9 @@ Informative adapter note. Not part of the normative spec.
 
 | AFI | AgentFS |
 |---|---|
-| [`stat(path)`](../specification/draft/operations/stat.md) | `SELECT … FROM fs_inode JOIN fs_dentry WHERE path = ?` |
-| [`list(path)`](../specification/draft/operations/list.md) | `SELECT … FROM fs_dentry WHERE parent_ino = ?` |
-| [`read(path, off, len)`](../specification/draft/operations/read.md) | Assemble chunks from `fs_data` where `ino = ?` in `chunk_size` slices |
+| [`stat(path)`](../specification/draft/operations/stat.md) | Walk path components through `fs_dentry` (`parent_ino`, `name`) to resolve an `ino`, then `SELECT … FROM fs_inode WHERE ino = ?` |
+| [`list(path)`](../specification/draft/operations/list.md) | Resolve `path` → `ino`, then `SELECT name, ino FROM fs_dentry WHERE parent_ino = ?` |
+| [`read(path, off, len)`](../specification/draft/operations/read.md) | Resolve `path` → `ino`, then assemble chunks from `fs_data` where `ino = ?` in `chunk_size` slices |
 | [`search(str)`](../specification/draft/operations/search.md) | LIKE scan over `fs_data` for text/* content types |
 | `write(path, bytes)` | Insert inode + dentry + chunked `fs_data` rows |
 | `mkdir(path)` | Insert directory inode + dentry |

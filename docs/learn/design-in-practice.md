@@ -30,7 +30,7 @@ MCP is what most agent runtimes speak but pointless if you want to
 `ssh some.afi.host`. We defined four bindings so providers can pick without
 locking themselves out of a client population.
 
-## Stability over velocity → mutation deferred to RFC 0002
+## Stability over velocity → mutation deferred to AEP-0002
 
 The v0.1 draft ships `stat`, `list`, `read`, `search` as normative. `write`,
 `mkdir`, `delete`, `move` are listed at Level 3 but deferred to a future AEP.

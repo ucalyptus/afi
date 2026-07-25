@@ -64,7 +64,7 @@ Everything is served as a searchable site at
 - ⏳ Reference MCP transport binding
 - ⏳ Conformance test kit
 - ⏳ Two independent implementations
-- ⏳ Cut v1.0, donate to a neutral home (LF AI & Data, CNCF sandbox)
+- ⏳ Cut v1.0, donate to a neutral home (LF AI & Data, CNCF Sandbox, or a new LF sub-foundation)
 
 See the [charter](https://ucalyptus.github.io/afi/community/charter/#v10-gate)
 for the exact v1.0 gating criteria.

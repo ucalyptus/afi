@@ -64,13 +64,17 @@ The four operations, with the shapes clients expect:
     // stat(path) — return metadata for one path
     app.get("/afi/stat", (req, res) => {
       const entry = fs.statSync(resolve(req.query.path));
+      const isDir = entry.isDirectory();
       res.json({
         path: req.query.path,
-        type: entry.isDirectory() ? "directory" : "file",
-        size: entry.size,
+        type: isDir ? "directory" : "file",
+        size: isDir ? 0 : entry.size,
+        // toISOString() emits RFC 3339 in UTC ("…Z")
         mtime: entry.mtime.toISOString(),
         ctime: entry.ctime.toISOString(),
-        content_type: mimeLookup(req.query.path) ?? "application/octet-stream",
+        content_type: isDir
+          ? "inode/directory"
+          : (mimeLookup(req.query.path) ?? "application/octet-stream"),
       });
     });
     ```
@@ -78,16 +82,23 @@ The four operations, with the shapes clients expect:
 === "Python"
 
     ```python
+    from datetime import datetime, timezone
+
     @app.get("/afi/stat")
     def stat(path: str):
         s = os.stat(resolve(path))
+        is_dir = stat_module.S_ISDIR(s.st_mode)
         return {
             "path": path,
-            "type": "directory" if stat.S_ISDIR(s.st_mode) else "file",
-            "size": s.st_size,
-            "mtime": datetime.fromtimestamp(s.st_mtime).isoformat(),
-            "ctime": datetime.fromtimestamp(s.st_ctime).isoformat(),
-            "content_type": mimetypes.guess_type(path)[0] or "application/octet-stream",
+            "type": "directory" if is_dir else "file",
+            "size": 0 if is_dir else s.st_size,
+            # Timezone-aware UTC → RFC 3339 with "+00:00" suffix
+            "mtime": datetime.fromtimestamp(s.st_mtime, tz=timezone.utc).isoformat(),
+            "ctime": datetime.fromtimestamp(s.st_ctime, tz=timezone.utc).isoformat(),
+            "content_type": (
+                "inode/directory" if is_dir
+                else (mimetypes.guess_type(path)[0] or "application/octet-stream")
+            ),
         }
     ```
 

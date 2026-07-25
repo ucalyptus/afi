@@ -1,0 +1,26 @@
+# Owners of the AFI repository.
+#
+# Order is significant. The last matching pattern for a given file wins.
+# Repository-wide default owners.
+*                            @ucalyptus
+
+# Governance and process — Core Maintainers only.
+/GOVERNANCE.md               @ucalyptus
+/CODE_OF_CONDUCT.md          @ucalyptus
+/SECURITY.md                 @ucalyptus
+/CODEOWNERS                  @ucalyptus
+/docs/community/**           @ucalyptus
+/aeps/**                     @ucalyptus
+
+# Specification — normative. Core Maintainer review required.
+/docs/specification/**       @ucalyptus
+
+# Provider adapter notes — informative. Any Maintainer may merge after
+# a Maintainer review, but the default owner remains a Core Maintainer
+# until the Providers WG is chartered.
+/docs/providers/**           @ucalyptus
+
+# Docs site infrastructure.
+/mkdocs.yml                  @ucalyptus
+/docs/assets/**              @ucalyptus
+/.github/workflows/**        @ucalyptus

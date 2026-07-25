@@ -1,0 +1,31 @@
+/* Minimal AFI theme overrides — keep the Material defaults intact and add a bit
+   of restraint to code blocks and section headings. */
+
+:root {
+  --md-code-font: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+.md-header__title {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  letter-spacing: -0.015em;
+}
+
+.md-typeset table:not([class]) {
+  font-size: 0.78rem;
+}
+
+/* Slightly tighter code blocks */
+.md-typeset code {
+  font-size: 0.82em;
+}
+
+/* Give the announcement bar a subtle border */
+.md-banner {
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}

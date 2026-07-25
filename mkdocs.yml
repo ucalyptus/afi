@@ -1,0 +1,172 @@
+site_name: Agent Filesystem Interface
+site_url: https://ucalyptus.github.io/afi/
+site_description: A vendor-neutral specification for exposing any data source to AI agents as a filesystem-shaped interface.
+site_author: AFI Contributors
+repo_url: https://github.com/ucalyptus/afi
+repo_name: ucalyptus/afi
+edit_uri: edit/main/docs/
+copyright: Copyright &copy; 2026 AFI contributors — Specification licensed under Apache-2.0, documentation licensed under CC BY 4.0.
+
+docs_dir: docs
+
+theme:
+  name: material
+  logo: assets/logo.svg
+  favicon: assets/favicon.svg
+  font:
+    text: Inter
+    code: JetBrains Mono
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.action.edit
+    - content.action.view
+    - content.tabs.link
+    - announce.dismiss
+  icon:
+    repo: fontawesome/brands/github
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      permalink_title: Anchor link
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.keys
+  - pymdownx.magiclink
+
+plugins:
+  - search
+  - tags
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ucalyptus/afi
+      name: AFI on GitHub
+  generator: false
+
+extra_css:
+  - assets/extra.css
+
+nav:
+  - Home: index.md
+  - Get started:
+      - getting-started/index.md
+      - Introduction: getting-started/intro.md
+      - Quickstart — build a provider: getting-started/build-a-provider.md
+      - Quickstart — build a client: getting-started/build-a-client.md
+  - Learn:
+      - learn/index.md
+      - Architecture: learn/architecture.md
+      - Design principles applied: learn/design-in-practice.md
+      - Versioning: learn/versioning.md
+      - Prior art: learn/prior-art.md
+  - Specification:
+      - specification/index.md
+      - Draft:
+          - specification/draft/index.md
+          - specification/draft/overview.md
+          - specification/draft/terminology.md
+          - specification/draft/path-model.md
+          - Basic:
+              - specification/draft/basic/index.md
+              - Discovery manifest: specification/draft/basic/discovery.md
+              - Access control: specification/draft/basic/access-control.md
+              - Errors: specification/draft/basic/errors.md
+              - Extensions & versioning: specification/draft/basic/extensions.md
+          - Operations:
+              - specification/draft/operations/index.md
+              - stat: specification/draft/operations/stat.md
+              - list: specification/draft/operations/list.md
+              - read: specification/draft/operations/read.md
+              - search: specification/draft/operations/search.md
+          - Schemas:
+              - specification/draft/schemas/index.md
+              - Entry: specification/draft/schemas/entry.md
+              - Match: specification/draft/schemas/match.md
+          - Transports:
+              - specification/draft/transports/index.md
+              - MCP tools binding: specification/draft/transports/mcp.md
+              - HTTP/JSON binding: specification/draft/transports/http.md
+              - FUSE binding: specification/draft/transports/fuse.md
+              - SSH binding: specification/draft/transports/ssh.md
+          - Conformance:
+              - specification/draft/conformance/index.md
+              - Profiles: specification/draft/conformance/profiles.md
+              - Test kit plan: specification/draft/conformance/test-kit.md
+  - Providers:
+      - providers/index.md
+      - Turso AgentFS: providers/agentfs.md
+      - Mintlify ChromaFs: providers/chromafs.md
+      - Supabase docs over SSH: providers/supabase-sh.md
+      - Cloudflare D1 (sketch): providers/d1.md
+  - Community:
+      - community/index.md
+      - Charter: community/charter.md
+      - Design principles: community/design-principles.md
+      - Governance: community/governance.md
+      - Contributor ladder: community/contributor-ladder.md
+      - AEP guidelines: community/aep-guidelines.md
+      - Feature lifecycle: community/feature-lifecycle.md
+      - Communication: community/communication.md
+      - Antitrust policy: community/antitrust.md
+      - Security policy: community/security.md
+      - Working groups:
+          - community/working-groups/index.md

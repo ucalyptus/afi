@@ -1,52 +1,79 @@
 # Contributing to AFI
 
-Thanks for your interest. AFI is a specification, not a codebase (yet), so
-most contributions are text: RFCs, provider adapter notes, or clarifications
-to the spec.
+Thank you for your interest in improving the Agent Filesystem Interface!
 
-## Kinds of contributions
+## Where to start
 
-### 1. Issues
-Open an issue for: bugs in the spec, ambiguities, missing capabilities,
-questions. Label with `question`, `bug`, or `proposal`.
+- **Small changes** (typos, editorial fixes, provider adapter notes) —
+  open a pull request directly.
+- **Substantive spec or process changes** — start with an
+  [AEP proposal issue](https://github.com/ucalyptus/afi/issues/new?template=aep_proposal.md),
+  then follow the
+  [AEP guidelines](https://ucalyptus.github.io/afi/community/aep-guidelines/).
+- **Questions** — use
+  [GitHub Discussions](https://github.com/ucalyptus/afi/discussions).
+- **Security issues** — see [`SECURITY.md`](SECURITY.md).
 
-### 2. Provider adapter notes
-Wrote or discovered an implementation that fits the AFI shape? Add a file
-under [`providers/`](./providers/) following the pattern in the existing
-adapter notes. This does not require an RFC.
+## Roles and ladder
 
-### 3. RFCs
-Substantive changes to `SPEC.md` — new operations, new schemas, new
-transports, new conformance levels — go through the RFC process in
-[GOVERNANCE.md](./GOVERNANCE.md).
+Contributions of any size welcome. Sustained contributions lead to
+Member, then Maintainer, then Core Maintainer roles — see the
+[contributor ladder](https://ucalyptus.github.io/afi/community/contributor-ladder/).
 
-To open an RFC:
+## Code of conduct
 
-1. `cp rfcs/TEMPLATE.md rfcs/NNNN-my-proposal.md` (next unused number)
-2. Fill in every section
-3. Open a PR titled `RFC NNNN: <short name>` with status `Draft`
-4. Wait at least 14 days before asking for merge
+Participation in the AFI project is governed by our
+[Code of Conduct](CODE_OF_CONDUCT.md). Please read it.
 
-### 4. Spec editorial fixes
-Typos, formatting, broken links, clarifications that don't change behavior —
-open a PR directly, no RFC needed. Tag `editorial`.
+## Repo conventions
 
-## Style
+### Commit messages
 
-- Use RFC 2119 keywords (MUST, SHOULD, MAY, …) precisely in normative text
-- Prefer examples in fenced code blocks over prose descriptions
-- Every operation should have a request shape, a response shape, and at least
-  one failure mode documented
-- Provider adapter notes should include: capability level, transport, auth
-  model, and one worked example
+Use imperative mood ("Add", "Fix", "Update"). Reference AEP numbers where
+applicable (e.g. `AEP-0002: initial draft of write operations`).
 
-## Code of Conduct
+### Pull request checklist
 
-Be direct, kind, and technical. If we need a formal CoC before this project
-has any real contributors, we've done something wrong. Once we have >5
-contributors from >2 orgs, we'll adopt the Contributor Covenant.
+Every PR should:
+
+1. Have a clear title and one-paragraph description of the change.
+2. Reference the relevant AEP (for spec changes) or issue.
+3. Build cleanly locally: `mkdocs build --strict`.
+4. Include cross-links to related pages where relevant.
+5. Not introduce new normative requirements unless the underlying AEP
+   is at least in `In-Review`.
+
+### Style
+
+- **Prose**: sentence-case headings, no trailing punctuation on
+  headings. Prefer active voice.
+- **Normative language**: RFC 2119 / RFC 8174 keywords (MUST, SHOULD,
+  MAY) — use them exactly as defined.
+- **Code samples**: real code, not pseudocode, wherever possible.
+  Prefer TypeScript for illustrative examples unless a specific
+  transport binding requires otherwise.
+
+## Building the docs locally
+
+```bash
+pip install mkdocs-material pymdown-extensions mkdocs-material-extensions
+mkdocs serve
+```
+
+Then open http://127.0.0.1:8000/.
+
+To verify the same strict build the CI runs:
+
+```bash
+mkdocs build --strict
+```
 
 ## License
 
-By contributing you agree that your contribution is licensed under Apache-2.0
-(see [LICENSE](./LICENSE)) and that you have the right to license it that way.
+By contributing, you agree that your contributions will be licensed
+under the [Apache License 2.0](LICENSE) for spec text and reference
+code, and under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) for
+non-normative documentation prose.
+
+We do not require a Contributor License Agreement (CLA).

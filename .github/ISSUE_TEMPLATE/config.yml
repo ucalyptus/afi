@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/ucalyptus/afi/security/advisories/new
+    about: Please report security issues privately via GitHub Security Advisories.
+  - name: General discussion
+    url: https://github.com/ucalyptus/afi/discussions
+    about: Ask questions, share ideas, and discuss the direction of AFI here.
+  - name: AEP guidelines
+    url: https://ucalyptus.github.io/afi/community/aep-guidelines/
+    about: Learn how to propose substantive spec changes via the AEP process.

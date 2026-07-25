@@ -1,0 +1,6 @@
+# Contact
+Contact: https://github.com/ucalyptus/afi/security/advisories/new
+Expires: 2027-01-01T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://ucalyptus.github.io/afi/.well-known/security.txt
+Policy: https://ucalyptus.github.io/afi/community/security/

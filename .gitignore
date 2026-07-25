@@ -6,3 +6,10 @@ target/
 .env
 .env.*
 !.env.example
+
+# MkDocs
+site/
+.cache/
+__pycache__/
+.venv/
+venv/

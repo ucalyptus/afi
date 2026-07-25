@@ -12,7 +12,7 @@
 **[Read the spec →](https://ucalyptus.github.io/afi/specification/draft/)** &nbsp;·&nbsp;
 **[Build a provider →](https://ucalyptus.github.io/afi/getting-started/build-a-provider/)** &nbsp;·&nbsp;
 **[Governance →](https://ucalyptus.github.io/afi/community/governance/)** &nbsp;·&nbsp;
-**[AEPs →](aeps/)**
+**[AEPs →](docs/aeps/)**
 
 </div>
 
@@ -43,7 +43,7 @@ AFI-aware agent can talk to.
 | [`docs/specification/`](docs/specification/) | The normative specification (draft) |
 | [`docs/community/`](docs/community/) | Governance, contributor ladder, AEP process |
 | [`docs/providers/`](docs/providers/) | Adapter notes for existing systems |
-| [`aeps/`](aeps/) | AFI Enhancement Proposals |
+| [`docs/aeps/`](docs/aeps/) | AFI Enhancement Proposals |
 | [`mkdocs.yml`](mkdocs.yml) | MkDocs Material site configuration |
 | [`.github/workflows/`](.github/workflows/) | Docs deploy + CI |
 

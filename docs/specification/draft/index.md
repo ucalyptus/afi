@@ -34,4 +34,4 @@ description: The draft AFI specification.
 
 | Date | Change | AEP |
 |---|---|---|
-| 2026-07-24 | Initial v0.1 draft published | [AEP-0001](https://github.com/ucalyptus/afi/blob/main/aeps/AEP-0001-charter.md) |
+| 2026-07-24 | Initial v0.1 draft published | [AEP-0001](../../aeps/AEP-0001-charter.md) |

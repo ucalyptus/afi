@@ -1,11 +1,16 @@
+---
+title: AEPs — AFI Enhancement Proposals
+description: The design documents that drive substantive changes to the AFI specification, governance, and process.
+---
+
 # AEPs — AFI Enhancement Proposals
 
-This directory contains **AFI Enhancement Proposals (AEPs)** — the design
+This section contains **AFI Enhancement Proposals (AEPs)** — the design
 documents that drive substantive changes to the AFI specification,
 governance, and process.
 
 The AEP process, workflow, and acceptance criteria are documented in
-**[AEP guidelines](https://ucalyptus.github.io/afi/community/aep-guidelines/)**.
+**[AEP guidelines](../community/aep-guidelines.md)**.
 
 ## Contents
 
@@ -20,7 +25,7 @@ The AEP process, workflow, and acceptance criteria are documented in
 2. Fill in every section.
 3. Open a PR titled `AEP-NNNN: <short name>` with status `Draft` in the
    AEP frontmatter.
-4. Follow the [AEP guidelines](https://ucalyptus.github.io/afi/community/aep-guidelines/).
+4. Follow the [AEP guidelines](../community/aep-guidelines.md).
 
 ## Numbering
 

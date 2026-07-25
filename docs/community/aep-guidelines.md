@@ -23,7 +23,7 @@ When drafting an AEP, authors should review the
 and tradeoffs that guide AFI's evolution.
 
 AEPs are maintained as markdown files in the
-[`aeps/` directory](https://github.com/ucalyptus/afi/tree/main/aeps) of
+[`docs/aeps/` directory](../aeps/index.md) of
 the specification repository. Their revision history serves as the
 historical record of the feature proposal.
 
@@ -100,8 +100,8 @@ flowchart TD
 
 ## Writing an AEP
 
-1. Copy [`aeps/AEP-TEMPLATE.md`](https://github.com/ucalyptus/afi/blob/main/aeps/AEP-TEMPLATE.md)
-   to `aeps/AEP-NNNN-short-name.md` (next unused number)
+1. Copy [`AEP-TEMPLATE.md`](../aeps/AEP-TEMPLATE.md)
+   to `docs/aeps/AEP-NNNN-short-name.md` (next unused number)
 2. Fill in every section — the template is exhaustive on purpose
 3. Open a PR titled `AEP-NNNN: <short name>` with status `Draft` in the
    AEP frontmatter

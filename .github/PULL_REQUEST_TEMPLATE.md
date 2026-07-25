@@ -9,7 +9,7 @@
 - [ ] Documentation / typo fix
 - [ ] Provider adapter note (informative)
 - [ ] Editorial improvement to existing spec text
-- [ ] New AEP (link to `aeps/AEP-NNNN-*.md`)
+- [ ] New AEP (link to `docs/aeps/AEP-NNNN-*.md`)
 - [ ] Reference implementation change
 - [ ] Site / build / tooling change
 - [ ] Governance or process change (requires AEP)

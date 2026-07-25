@@ -173,3 +173,7 @@ nav:
       - Security policy: community/security.md
       - Working groups:
           - community/working-groups/index.md
+  - AEPs:
+      - aeps/index.md
+      - AEP Template: aeps/AEP-TEMPLATE.md
+      - "AEP-0001: Project charter": aeps/AEP-0001-charter.md

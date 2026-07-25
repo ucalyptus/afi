@@ -9,7 +9,7 @@
 /SECURITY.md                 @ucalyptus
 /CODEOWNERS                  @ucalyptus
 /docs/community/**           @ucalyptus
-/aeps/**                     @ucalyptus
+/docs/aeps/**                @ucalyptus
 
 # Specification — normative. Core Maintainer review required.
 /docs/specification/**       @ucalyptus

@@ -56,7 +56,7 @@ Every PR should:
 ## Building the docs locally
 
 ```bash
-pip install mkdocs-material pymdown-extensions mkdocs-material-extensions
+pip install -r requirements.txt
 mkdocs serve
 ```
 

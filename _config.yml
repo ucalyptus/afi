@@ -7,3 +7,5 @@ relative_links:
   enabled: true
   collections: false
 show_downloads: false
+include:
+  - CONTRIBUTING.md

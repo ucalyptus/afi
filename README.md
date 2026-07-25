@@ -62,16 +62,18 @@ Everything is served as a searchable site at
 **v0.1 draft.** The specification, four transport bindings, and
 conformance profiles are drafted and searchable at the docs site above.
 
-Progress toward the [v1.0 gate](https://ucalyptus.github.io/afi/community/charter/#v10-gate):
+**Already published:**
 
-- ✅ Draft specification, four transport bindings, conformance profiles
-- ✅ Adapter sketches — AgentFS, ChromaFs, supabase.sh, Cloudflare D1
-- ⏳ Reference MCP transport binding
-- ⏳ Conformance test kit at v1.0
-- ⏳ Two independent conforming implementations across two or more organizations
-- ⏳ At least one implementation not maintained by AFI core (or by a recent Core Maintainer's employer)
-- ⏳ Neutral home identified and accepted (target order: LF AI & Data, CNCF Sandbox, or a new LF sub-foundation)
-- ⏳ No accepted AEP proposing breaking changes still open
+- Draft specification, four transport bindings, conformance profiles
+- Adapter sketches — AgentFS, ChromaFs, supabase.sh, Cloudflare D1
+
+**Remaining [v1.0 gate criteria](https://ucalyptus.github.io/afi/community/charter/#v10-gate)** (all 5 must be true):
+
+1. ⏳ Two or more independent conforming implementations exist across two or more organizations
+2. ⏳ At least one implementation is not maintained by AFI core (or by any organization that has held a core-maintainer seat in the past six months)
+3. ⏳ Conformance test kit is at v1.0 and both implementations pass all scenarios at the level they declare
+4. ⏳ A neutral home has been identified and accepted the project
+5. ⏳ No accepted AEP proposing breaking changes is still open
 
 ## Contributing
 

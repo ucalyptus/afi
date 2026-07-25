@@ -82,12 +82,15 @@ The four operations, with the shapes clients expect:
 === "Python"
 
     ```python
+    import os
+    import stat as stat_ops        # POSIX bit helpers (S_ISDIR, ...)
+    import mimetypes
     from datetime import datetime, timezone
 
     @app.get("/afi/stat")
     def stat(path: str):
         s = os.stat(resolve(path))
-        is_dir = stat_module.S_ISDIR(s.st_mode)
+        is_dir = stat_ops.S_ISDIR(s.st_mode)
         return {
             "path": path,
             "type": "directory" if is_dir else "file",

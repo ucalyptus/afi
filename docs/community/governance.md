@@ -33,7 +33,7 @@ other open-source projects:
 
 | Role | Scope |
 |---|---|
-| **Lead Maintainer(s) (BDFL)** | Final decision authority |
+| **Lead Maintainer(s)** | Final decision authority |
 | **Core Maintainers** | Overall project direction |
 | **Maintainers** | Working Groups, transport bindings, conformance kit |
 | **Contributors** | Issues, PRs, discussions |
@@ -44,8 +44,9 @@ other open-source projects:
   reference SDK, the conformance kit, documentation, or a Working Group.
 - **Core Maintainers** drive overall project direction and oversee
   Contributors and Maintainers.
-- **Lead Maintainer(s)** are the final decision maker(s) — the role
-  commonly known as BDFL (Benevolent Dictator for Life).
+- **Lead Maintainer(s)** are the final decision maker(s). In similar
+  projects this role is sometimes called a *Benevolent Dictator for
+  Life* (BDFL); AFI uses "Lead Maintainer" as the canonical term.
 
 Together, Maintainers, Core Maintainers, and Lead Maintainer(s) form the
 **AFI Steering Group**.
